@@ -1,0 +1,201 @@
+{
+  "NorthIndian": [
+    {
+      "id": "NI-1",
+      "title": "Chana Bhatura",    
+      "image": "Food/NorthIndian/chanaBhatura.jpg",
+      "price": 250
+    },
+    {
+      "id": "NI-2",
+      "title": "Kadhai Paneer",    
+      "image": "Food/NorthIndian/kadhaiPaneer.jpg",
+      "price" : 260
+    },
+    {
+      "id": "NI-3",
+      "title": "Shahi Paneer",    
+      "image": "Food/NorthIndian/ShahiPaneer.jpg",
+      "price" : 260
+    },
+    {
+      "id": "NI-4",
+      "title": "Samose",    
+      "image": "Food/NorthIndian/samose.jpg",
+      "price" : 100
+    },
+    {
+      "id": "NI-5",
+      "title": "Paneer Pakode",    
+      "image": "Food/NorthIndian/paneerPakode.webp",
+      "price" : 270
+    },
+    {
+      "id": "NI-6",
+      "title": "Aaloo Gobhi Pakode",    
+      "image": "Food/NorthIndian/aalooGobhiPakode.webp.webp",
+      "price" : 200
+    },
+    {
+      "id": "NI-7",
+      "title": "Mix Veg.",    
+      "image": "Food/NorthIndian/mixVeg.webp",
+      "price" : 160
+    },
+    {
+      "id": "NI-8",
+      "title": "Chana Masala",    
+      "image": "Food/NorthIndian/chanaMasala.webp",
+      "price" : 170
+    },
+    {
+      "id": "NI-9",
+      "title": "Rajmah Masala",    
+      "image": "Food/NorthIndian/rajmahMasala.webp",
+      "price" : 170
+    },
+    {
+      "id": "NI-10",
+      "title": "Mashroom Masala",    
+      "image": "Food/NorthIndian/mashroomMasala.webp",
+      "price" : 240
+    },
+    {
+      "id": "NI-11",
+      "title": "Paneer Bhurji",    
+      "image": "Food/NorthIndian/paneerBhurji.webp",
+      "price" : 260
+    },
+    {
+      "id": "NI-12",
+      "title": "Palak Paneer",    
+      "image": "Food/NorthIndian/palakPaneer.webp",
+      "price" : 290
+    },
+    {
+      "id": "NI-13",
+      "title": "Aloo Parantha",    
+      "image": "Food/NorthIndian/alooParantha.webp",
+      "price" : 120
+    },    
+    {
+      "id": "NI-14",
+      "title": "Onion Parantha",    
+      "image": "Food/NorthIndian/onionParantha.webp",
+      "price" : 150
+    }    
+  ],
+  "Chinese": [
+    {
+      "id": "C-1",
+      "title": "Veg Manchurian",    
+      "image": "Food/Chinese/vegManchurian.webp",
+      "price" : 200
+    },
+    {
+      "id": "C-2",
+      "title": "Veg Noodles",    
+      "image": "Food/Chinese/vegNoodes.webp",
+      "price" : 9999
+    },
+    {
+      "id": "C-3",
+      "title": "Veg Fried Rice",    
+      "image": "Food/Chinese/vegFriedRice.webp",
+      "price" : 170
+    },
+    {
+      "id": "C-4",
+      "title": "Veg Momos",    
+      "image": "Food/Chinese/vegMomos.webp",
+      "price" : 170
+    }
+   
+   
+    
+  ],
+  "TandooriBreads": [
+    {
+      "id": "TB-1",
+      "title": "Plain Naan",    
+      "image": "Food/TandooriBreads/plainNaan.webp",
+      "price" : 30
+    },
+    {
+      "id": "TB-2",
+      "title": "Butter Naan",    
+      "image": "Food/TandooriBreads/butterNaan.webp",
+      "price" : 40
+    },
+    {
+      "id": "TB-3",
+      "title": "Laccha Parantha",    
+      "image": "Food/TandooriBreads/lacchaParantha.webp",
+      "price" : 30
+    },
+    {
+      "id": "TB-4",
+      "title": "Roti",    
+      "image": "Food/TandooriBreads/roti.webp",
+      "price" : 12
+    },
+    {
+      "id": "TB-5",
+      "title": "Butter Roti",    
+      "image": "Food/TandooriBreads/butterRoti.webp",
+      "price" : 15
+    },
+    {
+      "id": "TB-6",
+      "title": "Garlic Naan",    
+      "image": "Food/TandooriBreads/garlicNaan.webp",
+      "price" : 15
+    }
+  ],
+  "Rice": [
+    {
+      "id": "R-1",
+      "title": "Plain Rice",    
+      "image": "Food/Rice/plainRice.webp",
+      "price" : 100
+    },    
+    {
+      "id": "R-2",
+      "title": "Jeera Rice",    
+      "image": "Food/Rice/jeeraRice.webp",
+      "price" : 120
+    },    
+    {
+      "id": "R-3",
+      "title": "Veg Biryani",    
+      "image": "Food/Rice/vegBiryaani.webp",
+      "price" : 210
+    },    
+    {
+      "id": "R-4",
+      "title": "Veg Pulao",    
+      "image": "Food/Rice/vegPulao.webp",
+      "price" : 160
+    } 
+  ],
+  "Curds":[
+    {
+      "id": "CU-1",
+      "title": "Plain Curd",    
+      "image": "Food/Curds/plainCurd.webp",
+      "price" : 80
+    }, 
+    {
+      "id": "CU-2",
+      "title": "Boondi Raita",    
+      "image": "Food/Curds/boondiRaita.webp",
+      "price" : 100
+    }, 
+    {
+      "id": "CU-3",
+      "title": "Mix Raita",    
+      "image": "Food/Curds/mixRaita.webp",
+      "price" : 120
+    }
+  ]
+}

@@ -9,12 +9,12 @@ export default function Navbar(){
       </Link>
       <Link to="/#menu" className='hover:text-white transition text-[1.5rem] font-medium flex gap-[.2rem]'>
         <i className="fa-regular fa-list"></i>
-        <span class="underline">Menu</span>
+        <span className="underline">Menu</span>
         </Link>
       <Link to="/about-app" className='underline hover:text-white transition text-[1.5rem] font-medium'>About</Link>
       <Link to="https://www.linkedin.com/in/alex21c/" className=' hover:text-white transition text-[1.5rem] font-medium flex gap-[.2rem]'>
         <i className="fa-solid fa-address-book"></i>
-        <span class="underline">Contact Us</span>
+        <span className="underline">Contact Us</span>
         
         </Link>
     </nav>

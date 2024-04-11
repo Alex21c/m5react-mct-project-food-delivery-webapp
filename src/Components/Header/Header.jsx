@@ -13,7 +13,10 @@ export default function Header(){
       <Navbar/>
       <div className="flex gap-[2rem] items-center">
         <SearchBar/>
-        <i title="Cart" className="fa-solid fa-cart-shopping text-[1.8rem] text-stone-700 transition hover:text-white cursor-pointer"></i>        
+        <Link to="/cart">
+
+          <i title="Cart" className="fa-solid fa-cart-shopping text-[1.8rem] text-stone-700 transition hover:text-white cursor-pointer"></i>        
+        </Link>
         <button className="select-none flex gap-[.5rem] items-center justify-center   hover:bg-yellow-400 transition cursor-pointer   text-stone-700    text-[1.3rem]   hover:text-white">
             <i className="fa-solid fa-right-to-bracket text-[1.8rem]"></i>
             <span className="text-[1rem]">Sign In</span>          

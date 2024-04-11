@@ -25,12 +25,12 @@ export default function Homepage(){
       
       console.log('here is the data', stateListOfProducts.NorthIndian) ;
       stateListOfProducts?.NorthIndian?.map((data, idx)=>{
-        console.log(data)
+        // console.log(data)
       })
     },[stateListOfProducts]);
 
   return (
-    <div className="mt-[2rem] pt-[1rem] border-0 border-slate-200 p-[2rem] w-[120rem]  m-auto rounded-md  text-[1.2rem] text-stone-200 ">
+    <div className="mt-[2rem] pt-[1rem] border-0 border-slate-200 p-[2rem] max-w-[120rem]  m-auto rounded-md  text-[1.2rem] text-stone-200 ">
       <Header/>      
       <div  className='flex flex-col items-center bg-gradient-to-br from-emerald-700 to-emerald-800'>
 

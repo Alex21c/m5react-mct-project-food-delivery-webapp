@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import ReactDOM from 'react-dom/client';
 // import './index.css';
 // import App from './App';
@@ -7,6 +7,8 @@ import Homepage from './Pages/Homepage/Homepage'
 import { RouterProvider, BrowserRouter, createBrowserRouter } from 'react-router-dom';
 import NotFound from './Components/NotFound/NotFound';
 import Product from './Pages/Product/Product';
+import Cart from './Pages/Cart/Cart';
+import ContextProviderFoodCartWebApp from './Components/Context/ContextFoodCartWebApp';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -17,15 +19,21 @@ const router = createBrowserRouter([
     path: "product/:productCategory/:productID",
     element: <Product/>,
     errorElement: <NotFound/>
+  },
+  {
+    path: "cart/",
+    element: <Cart/>,
+    errorElement: <NotFound/>
   }
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <RouterProvider router={router}/>
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-// reportWebVitals();
-// 
+
+root.render(
+  <ContextProviderFoodCartWebApp>
+    <RouterProvider router={router}/>
+  </ContextProviderFoodCartWebApp>
+
+  
+  
+);

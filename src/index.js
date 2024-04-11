@@ -1,15 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 // import './index.css';
-import App from './App';
+// import App from './App';
+import Homepage from './Pages/Homepage/Homepage'
 // import reportWebVitals from './reportWebVitals';
 import { RouterProvider, BrowserRouter, createBrowserRouter } from 'react-router-dom';
 import NotFound from './Components/NotFound/NotFound';
-
+import Product from './Pages/Product/Product';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <Homepage/>,
+    errorElement: <NotFound/>
+  },
+  {
+    path: "product/:productCategory/:productID",
+    element: <Product/>,
     errorElement: <NotFound/>
   }
 ]);

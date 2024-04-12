@@ -28,8 +28,7 @@ npm run start
 + [React Context API](https://react.dev/reference/react/useContext) for providing global state across application components
 + [Material UI Snack Bar](https://mui.com/material-ui/react-snackbar/) for providing notification to user when product added to cart
 + [Mateiral UI Pagination](https://mui.com/material-ui/react-pagination/) for optimizing user bandwidth & resouces uttiliztion by loading only limited no of products and rest allowing user to load using pagination
-+ [Local Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to store Cart in users device, so that it keeps in users browser window even if browser window is closed, until user himself clear the cart.
-+ [Google Firebase](console.firebase.google.com) for user Authentication 
++ [Google Firebase](console.firebase.google.com) for user Authentication, orders processing and storage
 
 ## Important 
 You need to create an `.env` file in the root containing Firebase API Key and API ID.

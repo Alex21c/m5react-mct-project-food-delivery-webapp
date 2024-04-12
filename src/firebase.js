@@ -7,18 +7,20 @@ import { getFirestore } from "firebase/firestore";
 const REACT_APP_FIREBASE_API_KEY = process.env.REACT_APP_FIREBASE_API_KEY;
 const REACT_APP_FIREBASE_API_ID = process.env.REACT_APP_FIREBASE_API_ID;
 
+
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: REACT_APP_FIREBASE_API_KEY,
+  apiKey: "AIzaSyCGoIB7A3NLxxqEMQJbHiCRS3iUzw-9d1k",
   authDomain: "mct5react-food-delivery-webapp.firebaseapp.com",
   projectId: "mct5react-food-delivery-webapp",
   storageBucket: "mct5react-food-delivery-webapp.appspot.com",
   messagingSenderId: "1061081587239",
-  appId: REACT_APP_FIREBASE_API_ID,
+  appId: "1:1061081587239:web:00a839c06353625ee1f802",
   measurementId: "G-0ZDKHK74FG"
 };
 // console.log(firebaseConfig);

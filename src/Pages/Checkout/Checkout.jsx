@@ -77,7 +77,12 @@ export default function Checkout(){
       errorIfAny = "Required Yours Pin Code!"
     }
 
-    errorIfAny ? showError(updateStateSuccessAndErrorMsg, errorIfAny) : hideError(updateStateSuccessAndErrorMsg);
+    if(errorIfAny){
+      showError(updateStateSuccessAndErrorMsg, errorIfAny);
+      return;
+    } 
+      
+    hideError(updateStateSuccessAndErrorMsg);
   
     //console.log(stateCart);
     let temp = Object.entries(stateCart).reduce((accumulator, [idx, products])=>{
@@ -122,6 +127,10 @@ export default function Checkout(){
     },1000)
 
   }
+
+  useEffect(()=>{
+    hideError(updateStateSuccessAndErrorMsg);
+  },[]);
   return (
     <div className="mt-[2rem] pt-[1rem] border-0 border-slate-200 p-[2rem] max-w-[120rem]  m-auto rounded-md  text-[1.2rem] text-stone-200 ">
       <Header/>  

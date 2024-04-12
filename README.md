@@ -27,7 +27,7 @@ npm run start
 + [React Router Dom](https://reactrouter.com/en/main/start/tutorial) for providing routing functionality
 + [React Context API](https://react.dev/reference/react/useContext) for providing global state across application components
 + [Material UI Snack Bar](https://mui.com/material-ui/react-snackbar/) for providing notification to user when product added to cart
-+ [Mateiral UI Pagination](https://mui.com/material-ui/react-pagination/) for optimizing user bandwidth & resouces uttiliztion by loading only limited no of products and rest allowing user to load using pagination
++ [Mateiral UI Pagination](https://mui.com/material-ui/react-pagination/) for optimizing user bandwidth & resources utilization by loading only limited no of products and rest allowing user to load using pagination
 + [Google Firebase](console.firebase.google.com) for user Authentication, orders processing and storage
 
 ## Important 

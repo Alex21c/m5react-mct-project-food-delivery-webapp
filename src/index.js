@@ -8,6 +8,7 @@ import { RouterProvider, BrowserRouter, createBrowserRouter } from 'react-router
 import NotFound from './Components/NotFound/NotFound';
 import Product from './Pages/Product/Product';
 import Cart from './Pages/Cart/Cart';
+import SignIn from './Pages/SignIn/SignIn';
 import ContextProviderFoodCartWebApp from './Components/Context/ContextFoodCartWebApp';
 const router = createBrowserRouter([
   {
@@ -24,7 +25,13 @@ const router = createBrowserRouter([
     path: "cart/",
     element: <Cart/>,
     errorElement: <NotFound/>
+  },
+  {
+    path: "SignIn/",
+    element: <SignIn/>,
+    errorElement: <NotFound/>
   }
+
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

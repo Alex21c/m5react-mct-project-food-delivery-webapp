@@ -24,10 +24,10 @@
     },
     {
       "id": "NI-4",
-      "title": "Samose",    
-      "image": "Food/NorthIndian/samose.jpg",
-      "price" : 100,
-      "description": ["Samosas are a popular Indian snack consisting of crispy, deep-fried pastry filled with a savory mixture typically containing spiced potatoes, peas, and sometimes other ingredients like onions, lentils, or minced meat. The filling is seasoned with a blend of aromatic spices such as cumin, coriander, garam masala, and chili powder. Samosas are enjoyed as a delicious street food or appetizer and are often served with chutneys or sauces for dipping. They are known for their triangular shape and crispy texture, making them a favorite snack across South Asia and beyond."]
+      "title": "Aloo Parantha",    
+      "image": "Food/NorthIndian/alooParantha.webp",
+      "price" : 120,
+      "description": ["Aloo Paratha is a popular Indian flatbread made by stuffing a dough with a spicy mixture of mashed potatoes (aloo) and aromatic spices. The dough, typically made from whole wheat flour, water, and a pinch of salt, is rolled out into a circle, stuffed with the potato mixture, sealed, and then rolled out again into a flatbread. The stuffed flatbread is then cooked on a hot griddle with ghee or oil until golden brown and crispy on both sides. Aloo Paratha is often enjoyed with yogurt, pickles, or chutney, and it's a favorite breakfast or brunch option in many parts of India."]
     },
     {
       "id": "NI-5",
@@ -66,8 +66,8 @@
     },
     {
       "id": "NI-10",
-      "title": "Mashroom Masala",    
-      "image": "Food/NorthIndian/mashroomMasala.webp",
+      "title": "Mushroom Masala",    
+      "image": "Food/NorthIndian/mushroomMasala.webp",
       "price" : 240,
       "description": ["Mushroom Masala is a delicious Indian dish featuring mushrooms cooked in a flavorful gravy. The mushrooms are typically sliced and sautéed with onions, garlic, and ginger, then simmered in a tomato-based sauce infused with aromatic spices such as cumin, coriander, turmeric, garam masala, and chili powder. The dish may also include ingredients like bell peppers, peas, or cream to enhance its taste and texture. Mushroom Masala is a vegetarian favorite, appreciated for its rich, savory flavor and versatility. It pairs well with rice, roti, or naan for a satisfying meal."]
     },
@@ -87,10 +87,11 @@
     },
     {
       "id": "NI-13",
-      "title": "Aloo Parantha",    
-      "image": "Food/NorthIndian/alooParantha.webp",
-      "price" : 120,
-      "description": ["Aloo Paratha is a popular Indian flatbread made by stuffing a dough with a spicy mixture of mashed potatoes (aloo) and aromatic spices. The dough, typically made from whole wheat flour, water, and a pinch of salt, is rolled out into a circle, stuffed with the potato mixture, sealed, and then rolled out again into a flatbread. The stuffed flatbread is then cooked on a hot griddle with ghee or oil until golden brown and crispy on both sides. Aloo Paratha is often enjoyed with yogurt, pickles, or chutney, and it's a favorite breakfast or brunch option in many parts of India."]
+      "title": "Samose",    
+      "image": "Food/NorthIndian/samose.jpg",
+      "price" : 100,
+      "description": ["Samosas are a popular Indian snack consisting of crispy, deep-fried pastry filled with a savory mixture typically containing spiced potatoes, peas, and sometimes other ingredients like onions, lentils, or minced meat. The filling is seasoned with a blend of aromatic spices such as cumin, coriander, garam masala, and chili powder. Samosas are enjoyed as a delicious street food or appetizer and are often served with chutneys or sauces for dipping. They are known for their triangular shape and crispy texture, making them a favorite snack across South Asia and beyond."]      
+
     },    
     {
       "id": "NI-14",

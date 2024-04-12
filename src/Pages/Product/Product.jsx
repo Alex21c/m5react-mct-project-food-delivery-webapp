@@ -8,10 +8,12 @@ import DB from '../../Database.json';
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
 import { ContextFoodCartWebApp } from "../../Components/Context/ContextFoodCartWebApp";
+import SimpleSnackbar, {useSetInitialStateSnackbar, openTheSnackBar} from '../../Components/Notifications/SimpleSnackBar';
 
 export default function Product(){
-
+  const [open, setOpen] = useSetInitialStateSnackbar();
   let {stateCart, dispatch} = useContext(ContextFoodCartWebApp);
+  let {stateWhoIsCurrentPage, updateStateWhoIsCurrentPage} = useContext(ContextFoodCartWebApp);
   // let [stateCart, dispatch] = useReducer(reducer, []);
   let refQuantity = useRef(null);
   const {productID, productCategory} = useParams();
@@ -19,7 +21,7 @@ export default function Product(){
   
   let currentProductQuantityAlreadyInCart  = stateCart.products[`${productCategory}-${productID}`]?.quantity;
   let defaultQuantity = currentProductQuantityAlreadyInCart ? currentProductQuantityAlreadyInCart : 1;
-  console.log(currentProductQuantityAlreadyInCart)
+  //console.log(currentProductQuantityAlreadyInCart)
 
   function fetchProduct(productID, productCategory){
     return DB[productCategory].filter(product=>product.id === productID);
@@ -27,25 +29,26 @@ export default function Product(){
  
 
   useEffect(()=>{    
-    // console.log(productID, productCategory, DB);    
-    // console.log(stateProduct);
+    // //console.log(productID, productCategory, DB);    
+    // //console.log(stateProduct);
     udpateStateProduct(fetchProduct(productID, productCategory)[0]);
+    updateStateWhoIsCurrentPage('Product');
     // fetchLocalProduct();
  
   }, [])
 
-  useEffect(()=>{
-    console.log(stateCart);
-  },[stateCart]);
+  // useEffect(()=>{
+  //   //console.log(stateCart);
+  // },[stateCart]);
 
   // useEffect(()=>{
-  //   console.log(stateProduct.image)
+  //   //console.log(stateProduct.image)
   // }, [stateProduct]);
   
   return (
     <div className="mt-[2rem] pt-[1rem] border-0 border-slate-200 p-[2rem] max-w-[120rem]  m-auto rounded-md  text-[1.2rem] text-stone-200 ">
       <Header/>  
-
+      <SimpleSnackbar open={open} setOpen={setOpen}/>
       <div id='wrapperProduct' className='flex flex-col items-center bg-gradient-to-br from-emerald-700 to-emerald-800 pb-[5rem]'>
         {
 
@@ -72,7 +75,9 @@ export default function Product(){
                           <span>Quantity</span>
                           <input type="number" ref={refQuantity} defaultValue={defaultQuantity} min={0} max={20} className="text-stone-700 w-[5rem] transition focus:outline focus:outline-2 focus:outline-yellow-500 pr-[0] p-[.3rem] bg-stone-200  rounded-md text-[1.5rem] text-center"/>
                         </div>
-                        <button onClick={()=>dispatch({type:'updateProductQuantity', payload: {
+                        <button onClick={()=>{
+
+                            dispatch({type:'updateProductQuantity', payload: {
                           quantity:refQuantity.current.value,
                           productID: stateProduct.id,
                           productCategory: productCategory,
@@ -80,9 +85,17 @@ export default function Product(){
                           price: stateProduct.price,
                           imagePath: stateProduct.image
 
-                          }})}  className="select-none flex gap-[1rem] items-center justify-center outline outline-2 outline-amber-50  hover:bg-yellow-400 transition cursor-pointer px-[1rem] py-[.5rem] rounded-md hover:text-white text-stone-700   bg-yellow-300 ">
+                          }});
+                          openTheSnackBar(setOpen);
+                        }
+                          
+                          }  className="select-none flex gap-[1rem] items-center justify-center outline outline-2 outline-amber-50  hover:bg-yellow-400 transition cursor-pointer px-[1rem] py-[.5rem] rounded-md hover:text-white text-stone-700   bg-yellow-300 ">
                           <i className="fa-solid fa-cart-shopping text-[1.8rem]"/>
-                          <span className="text-[1.5rem]">Add to Cart</span>
+                          <span className="text-[1.5rem]">
+                             {
+                              stateCart.products[`${productCategory}-${productID}`]?.quantity > 0 ? "Update Cart" : "Add to Cart"
+                             } 
+                             </span>
                         </button>  
                       </dd>
                     </div>

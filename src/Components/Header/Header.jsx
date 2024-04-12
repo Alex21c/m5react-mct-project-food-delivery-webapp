@@ -1,7 +1,11 @@
 import Navbar from "../Navbar/Navbar";
 import SearchBar from "../SearchBar/SearchBar";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { ContextFoodCartWebApp } from "../Context/ContextFoodCartWebApp";
+
 export default function Header(){
+  let {stateCart, dispatch} = useContext(ContextFoodCartWebApp);
   return (
     <header className="flex bg-gradient-to-br from-yellow-200 to-yellow-300 items-center justify-between p-[1rem] rounded-tl-md rounded-tr-md ">
       <Link to="/" title="Logo: Food Delivery App">
@@ -12,15 +16,21 @@ export default function Header(){
       </Link>
       <Navbar/>
       <div className="flex gap-[2rem] items-center">
-        <SearchBar/>
-        <Link to="/cart">
 
-          <i title="Cart" className="fa-solid fa-cart-shopping text-[1.8rem] text-stone-700 transition hover:text-white cursor-pointer"></i>        
+        <Link to="/cart" className="relative">           
+          <i title="Cart" className="fa-solid fa-cart-shopping text-[2.5rem] text-stone-700 transition hover:text-white cursor-pointer"></i>    
+          { Object.keys(stateCart.products).length  >= 1 && 
+            <i className="fa-solid fa-circle text-emerald-500 absolute top-[-.2rem] right-[-.4rem]"></i>
+          }    
         </Link>
-        <button className="select-none flex gap-[.5rem] items-center justify-center   hover:bg-yellow-400 transition cursor-pointer   text-stone-700    text-[1.3rem]   hover:text-white">
-            <i className="fa-solid fa-right-to-bracket text-[1.8rem]"></i>
-            <span className="text-[1rem]">Sign In</span>          
+
+
+        <Link to="/SignIn">        
+          <button className="select-none flex gap-[.5rem] items-center justify-center   hover:bg-yellow-400 transition cursor-pointer   text-stone-700    text-[1.3rem]   hover:text-white">
+              <i className="fa-solid fa-right-to-bracket text-[1.8rem]"></i>
+              <span className="text-[1rem]">Sign In</span>          
           </button>
+        </Link>
       </div>
       
     </header>

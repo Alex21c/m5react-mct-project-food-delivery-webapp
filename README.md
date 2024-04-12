@@ -16,6 +16,9 @@ npm install
 npm run start
 ```
 
+
+
+
 ## Tech. Stack Used:
 + [React](https://react.dev/)
 + [TailwindCSS](https://tailwindcss.com/)
@@ -28,9 +31,23 @@ npm run start
 + [Local Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to store Cart in users device, so that it keeps in users browser window even if browser window is closed, until user himself clear the cart.
 + [Google Firebase](console.firebase.google.com) for user Authentication 
 
+## Important 
+You need to create an `.env` file in the root containing Firebase API Key and API ID.
+Yours .env file should look like this
+```
+REACT_APP_FIREBASE_API_KEY= Yours firebase api key
+REACT_APP_FIREBASE_API_ID= Yours firebase api ID
+```
+### How to get yours API Key & API ID
+Now to get that API Key, you need to signup to [Google Firebase](console.firebase.google.com) and create new project and then crate new app,
+while deploying yours app to [Vercel](https://vercel.com/) you need to specify these Enviornmnet variables inside settings.
+
+### Why i did this?
+to protect my API Key from aunthorized activity! 
 
 
 ## Author
 [Abhishek kumar](https://www.linkedin.com/in/alex21c/), ([Geekster](https://geekster.in/) MERN Stack FS-14 Batch)
+
 
 

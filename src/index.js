@@ -9,6 +9,8 @@ import NotFound from './Components/NotFound/NotFound';
 import Product from './Pages/Product/Product';
 import Cart from './Pages/Cart/Cart';
 import SignIn from './Pages/SignIn/SignIn';
+import Checkout from './Pages/Checkout/Checkout';
+import OrderReceived from './Pages/OrderReceived/OrderReceived';
 import ContextProviderFoodCartWebApp from './Components/Context/ContextFoodCartWebApp';
 const router = createBrowserRouter([
   {
@@ -27,7 +29,17 @@ const router = createBrowserRouter([
     errorElement: <NotFound/>
   },
   {
-    path: "SignIn/",
+    path: "checkout/",
+    element: <Checkout/>,
+    errorElement: <NotFound/>
+  },
+  {
+    path: "order-received/",
+    element: <OrderReceived/>,
+    errorElement: <NotFound/>
+  },    
+  {
+    path: "SignIn/:redirectURL",
     element: <SignIn/>,
     errorElement: <NotFound/>
   }

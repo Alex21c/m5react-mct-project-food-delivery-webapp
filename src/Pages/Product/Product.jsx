@@ -9,19 +9,26 @@ import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
 import { ContextFoodCartWebApp } from "../../Components/Context/ContextFoodCartWebApp";
 import SimpleSnackbar, {useSetInitialStateSnackbar, openTheSnackBar} from '../../Components/Notifications/SimpleSnackBar';
+import { useNavigate } from "react-router-dom";
+
 
 export default function Product(){
+  let navigate = useNavigate();
+
   const [open, setOpen] = useSetInitialStateSnackbar();
   let {stateCart, dispatch} = useContext(ContextFoodCartWebApp);
-  let {stateWhoIsCurrentPage, updateStateWhoIsCurrentPage} = useContext(ContextFoodCartWebApp);
+  let {stateWhoIsCurrentPage, updateStateWhoIsCurrentPage, stateUserAuthMetaData} = useContext(ContextFoodCartWebApp);
   // let [stateCart, dispatch] = useReducer(reducer, []);
   let refQuantity = useRef(null);
   const {productID, productCategory} = useParams();
   let [stateProduct, udpateStateProduct] = useState({});
   
-  let currentProductQuantityAlreadyInCart  = stateCart.products[`${productCategory}-${productID}`]?.quantity;
+  let currentProductQuantityAlreadyInCart  = null;
+  if(stateCart?.products && stateCart?.products[`${productCategory}-${productID}`]?.quantity){
+    currentProductQuantityAlreadyInCart = stateCart?.products[`${productCategory}-${productID}`]?.quantity; 
+  }
   let defaultQuantity = currentProductQuantityAlreadyInCart ? currentProductQuantityAlreadyInCart : 1;
-  //console.log(currentProductQuantityAlreadyInCart)
+  ////console.log(currentProductQuantityAlreadyInCart)
 
   function fetchProduct(productID, productCategory){
     return DB[productCategory].filter(product=>product.id === productID);
@@ -29,8 +36,8 @@ export default function Product(){
  
 
   useEffect(()=>{    
-    // //console.log(productID, productCategory, DB);    
-    // //console.log(stateProduct);
+    // ////console.log(productID, productCategory, DB);    
+    // ////console.log(stateProduct);
     udpateStateProduct(fetchProduct(productID, productCategory)[0]);
     updateStateWhoIsCurrentPage('Product');
     // fetchLocalProduct();
@@ -38,11 +45,11 @@ export default function Product(){
   }, [])
 
   // useEffect(()=>{
-  //   //console.log(stateCart);
+  //   ////console.log(stateCart);
   // },[stateCart]);
 
   // useEffect(()=>{
-  //   //console.log(stateProduct.image)
+  //   ////console.log(stateProduct.image)
   // }, [stateProduct]);
   
   return (
@@ -76,6 +83,16 @@ export default function Product(){
                           <input type="number" ref={refQuantity} defaultValue={defaultQuantity} min={0} max={20} className="text-stone-700 w-[5rem] transition focus:outline focus:outline-2 focus:outline-yellow-500 pr-[0] p-[.3rem] bg-stone-200  rounded-md text-[1.5rem] text-center"/>
                         </div>
                         <button onClick={()=>{
+                          // validating is user logged in ?
+                          if(!stateUserAuthMetaData?.uid){
+                            //console.log('user is not logged in, redirect user to login page!');
+                            let currentPageUrl = encodeURIComponent(window.location.pathname);
+                            
+                            navigate(`/SignIn/${currentPageUrl}`)
+
+                            return;
+                          }
+
 
                             dispatch({type:'updateProductQuantity', payload: {
                           quantity:refQuantity.current.value,
@@ -93,7 +110,7 @@ export default function Product(){
                           <i className="fa-solid fa-cart-shopping text-[1.8rem]"/>
                           <span className="text-[1.5rem]">
                              {
-                              stateCart.products[`${productCategory}-${productID}`]?.quantity > 0 ? "Update Cart" : "Add to Cart"
+                              stateCart?.products && stateCart.products[`${productCategory}-${productID}`]?.quantity > 0 ? "Update Cart" : "Add to Cart"
                              } 
                              </span>
                         </button>  

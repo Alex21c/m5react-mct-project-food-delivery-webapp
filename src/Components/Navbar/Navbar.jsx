@@ -4,7 +4,7 @@ import { useContext } from 'react';
 
 export default function Navbar(){
   let {stateWhoIsCurrentPage} = useContext(ContextFoodCartWebApp);
-  //console.log(stateWhoIsCurrentPage);
+  ////console.log(stateWhoIsCurrentPage);
   return (
     <nav id='headerNav' className=" p-[2rem] flex gap-[1.5rem] justify-center text-stone-700">
       <h2 className='displayNone'>Primary Header Navigation</h2>

@@ -8,10 +8,10 @@ export default function SearchBar(){
     if(query.length === 0 ){
       updateStateListOfProducts(stateInitialListOfProducts);
     }
-    // console.log('query is :' + query);
+    // //console.log('query is :' + query);
     // sanitized query
       query = query.trim().toLowerCase();
-      // console.log(query);
+      // //console.log(query);
 
     updateStateListOfProducts(stateInitialListOfProducts.filter(product=>{
       return(product.title.toLowerCase().includes(query))

@@ -25,18 +25,18 @@ export default function Homepage(){
     useEffect(()=>{
       // now selecting only first N      
       updateStateTotalNoOfPages(Math.floor(stateListOfProducts.length/fetchOnlyNProducts)+1 );
-      //console.log(stateTotalNoOfPages);
+      ////console.log(stateTotalNoOfPages);
       stateListOfProducts.length>0 ?  updateStatePaginationListProducts(stateListOfProducts?.slice(paginationSliceBegin, paginationSliceEnd)) : updateStatePaginationListProducts([]);
     }, [stateListOfProducts]);
 
     useEffect(()=>{
-      //console.log('hi hi hi');
+      ////console.log('hi hi hi');
       paginationSliceEnd = currentPage * fetchOnlyNProducts;
       // safeguard
         // if(paginationSliceEnd > stateListOfProducts.length){
         //   paginationSliceEnd = stateListOfProducts.length+1;
         // }
-        // console.log(paginationSliceEnd);
+        // //console.log(paginationSliceEnd);
 
       paginationSliceBegin = paginationSliceEnd - fetchOnlyNProducts;
       stateListOfProducts.length>0 ? updateStatePaginationListProducts(stateListOfProducts?.slice(paginationSliceBegin,  paginationSliceEnd)) :   updateStatePaginationListProducts([]);;
@@ -45,7 +45,7 @@ export default function Homepage(){
 
   // initial lodaing of products
     useEffect(()=>{
-      // //console.log(DB)
+      // ////console.log(DB)
       updateStateWhoIsCurrentPage('Homepage');
       // let initialListOfProductsMerged = mergerAllProductsTogetherIntoSingleArray()
       // updateStateInitialListOfProducts(initialListOfProductsMerged);
@@ -53,18 +53,18 @@ export default function Homepage(){
 
      
 
-      // //console.log('here is the data', stateListOfProducts) 
+      // ////console.log('here is the data', stateListOfProducts) 
     },[]);
 
     // useEffect(()=>{
-    //   console.log(stateInitialListOfProducts);
+    //   //console.log(stateInitialListOfProducts);
     // },[stateInitialListOfProducts]);
 
 
     useEffect(()=>{
       
-      // console.log(stateListOfProducts);
-        // //console.log(data)
+      // //console.log(stateListOfProducts);
+        // ////console.log(data)
       
     },[stateListOfProducts]);
 

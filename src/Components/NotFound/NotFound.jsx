@@ -35,7 +35,7 @@ export default function ErrorPage(){
       updateStateMsgToUser(" The webpage you are looking for does not exist as of now, may be in coming future we can have that webpage! Let me help you to navigate back to Homepage!");
     }
   }, [])
-  // console.log(error);
+  // //console.log(error);
   return (
     <div className="p-[1rem] max-w-[30rem] m-[auto] flex flex-col gap-[1rem]">
       <h2 className="font-semibold text-[2rem] text-slate-200 flex flex-col gap-[1rem]">

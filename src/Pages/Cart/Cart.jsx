@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useContext, useReducer } from "react";
 import { useRef } from "react";
 import { useEffect } from "react";
@@ -7,31 +8,60 @@ import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
 import { ContextFoodCartWebApp } from "../../Components/Context/ContextFoodCartWebApp";
 import CartItem from "../../Components/CartItem/CartItem";
+import { doc, setDoc, getDoc } from "firebase/firestore"; 
+// import {FIREBASE_DB} from '../../firebase';
 
 export default function Cart(){
   let {stateCart, dispatch} = useContext(ContextFoodCartWebApp);
   let {stateWhoIsCurrentPage, updateStateWhoIsCurrentPage} = useContext(ContextFoodCartWebApp);
   let [stateCartTotal, updateStateCartTotal] = useState(0);
 
-  // //console.log(stateCart);
-  // //console.log(stateCart.products);
+  // async function setStateIntoFirebaseDB(){    
+  //   await setDoc(doc(FIREBASE_DB,'usersCartState', "1Tpw14sl49caH7Hc5D0yHhoLWH03"), {
+  //     state: "this is the lorem ipsum state data!",
+  //   });        
+  // }
+
+  // async function getStateFromFirebaseDB(){
+  //   const docRef = doc(FIREBASE_DB, "usersCartState", "1Tpw14sl49caH7Hc5D0yHhoLWH03");
+  //   const docSnap = await getDoc(docRef);    
+  //   if (docSnap.exists()) {
+  //     //console.log("Document data:", docSnap.data());
+  //   } else {
+  //     // docSnap.data() will be undefined in this case
+  //     //console.log("No such document!");
+  //   }    
+  // }
+  // ////console.log(stateCart);
+  // ////console.log(stateCart.products);
+  useEffect(()=>{
+
+
+// Add a new document in collection "cities"
+    // setStateIntoFirebaseDB();
+    // getStateFromFirebaseDB();
+
+  }, []);
+
   useEffect(()=>{
     updateStateWhoIsCurrentPage('Cart');
-    
+    // //console.log('state cart is ', stateCart);
   },[]);
   useEffect(()=>{
     computeCartTotal();
+    
   },[stateCart]);
 
   function computeCartTotal(){
-    //console.log(stateCart);
-    updateStateCartTotal(Object.entries(stateCart.products).reduce((accumulator, [idx, product])=>{
-      //console.log(product.price);
+    
+    ////console.log(stateCart);
+    stateCart?.products &&  updateStateCartTotal(Object.entries(stateCart.products).reduce((accumulator, [idx, product])=>{
+      ////console.log(product.price);
       return accumulator + (Number(product.price) * Number(product.quantity));
     },0));
 
     // Object.entries(stateCart.products).reduce((accumulator, currentProduct)=>{
-    //   //console.log(currentProduct)
+    //   ////console.log(currentProduct)
     // } , 0)
 
   }
@@ -45,30 +75,37 @@ export default function Cart(){
           <h2 className="smallCaps text-slate-50 text-[2rem] text-center mt-[1rem]">Yours Shopping Cart</h2>
           <div>
             {
-              Object.keys(stateCart.products).length  < 1 ? <div className="text-[2rem] text-center text-yellow-200">Yours Shopping Cart is Empty!</div> : ""
+              stateCartTotal <=0 ? <div className="text-[2rem] text-center text-yellow-200">Yours Shopping Cart is Empty!</div> : ""
 
               
             }
           </div>
           <div className="wrapperAllProducts flex flex-col gap-[2rem]">
             {
-            Object.entries(stateCart.products).map(([idx, product])=><CartItem key={idx} product={product} dispatch={dispatch}/>)
+            stateCart?.products && Object.entries(stateCart.products).map(([idx, product])=><CartItem key={idx} product={product} dispatch={dispatch}/>)
 
             }
           </div>
-          <div className="wrapperTotal border-t-2 border-yellow-100 p-[1rem] flex justify-between">
-            <h2 className="smallCaps text-slate-50 text-[2rem] font-semibold">Total</h2>
-            <div className="font-semibold   transition cursor-pointer px-[2rem] p-[.5rem] rounded-md hover:text-slate-50 text-stone-200 text-[1.9rem]">
-              ₹{stateCartTotal}
+          {
+            stateCartTotal >0 &&
+            <div className="wrapperTotal border-t-2 border-yellow-100 p-[1rem] flex justify-between">
+              <h2 className="smallCaps text-slate-50 text-[2rem] font-semibold">Total</h2>
+              <div className="font-semibold   transition cursor-pointer px-[2rem] p-[.5rem] rounded-md hover:text-slate-50 text-stone-200 text-[1.9rem]">
+                ₹{stateCartTotal}
+              </div>
             </div>
-          </div>
-          { Object.keys(stateCart.products).length  >= 1 &&
+          }
+
+
+          { stateCart?.products &&  Object.keys(stateCart.products).length  >= 1 &&
 
           <div className="mt-[-2rem] self-end">
-            <button className="outline-amber-50 bg-yellow-300 hover:bg-yellow-500 transition cursor-pointer px-[1.3rem] py-[.3rem] rounded-md hover:text-slate-50 text-stone-700 text-[1.5rem] flex gap-[.5rem] items-center">
-              <i className="fa-sharp fa-solid fa-bag-shopping text-stone-700 text-[2rem]"></i>
-              <span className="text-[1.5rem] font-medium">Proceed to Buy</span>
-            </button>
+            <Link to="/Checkout">
+              <button className="outline-amber-50 bg-yellow-300 hover:bg-yellow-500 transition cursor-pointer px-[1.3rem] py-[.3rem] rounded-md hover:text-slate-50 text-stone-700 text-[1.5rem] flex gap-[.5rem] items-center">
+                <i className="fa-sharp fa-solid fa-bag-shopping text-stone-700 text-[2rem]"></i>
+                <span className="text-[1.5rem] font-medium">Proceed to Buy</span>
+              </button>
+            </Link>
           </div>
           }
 

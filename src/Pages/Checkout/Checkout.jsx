@@ -1,3 +1,4 @@
+import './Checkout.css';
 import { useParams } from "react-router-dom";
 import { useContext, useReducer } from "react";
 import { useRef } from "react";
@@ -132,14 +133,14 @@ export default function Checkout(){
     hideError(updateStateSuccessAndErrorMsg);
   },[]);
   return (
-    <div className="mt-[2rem] pt-[1rem] border-0 border-slate-200 p-[2rem] max-w-[120rem]  m-auto rounded-md  text-[1.2rem] text-stone-200 ">
+    <div className="pageWrapper mt-[2rem] pt-[1rem] border-0 border-slate-200 p-[2rem] max-w-[120rem]  m-auto rounded-md  text-[1.2rem] text-stone-200 ">
       <Header/>  
 
       <div  className='flex flex-col items-center bg-gradient-to-br from-emerald-700 to-emerald-800 pb-[5rem] p-[1rem]'>
         <section className="flex flex-col gap-[1rem] ">
           <h2 className=" text-stone-200 font-semibold flex gap-[1rem] items-center">
             <i className="fa-solid fa-location-dot text-[2rem]"></i>
-            <span className="text-[1.5rem]">Yours Shipping Details</span>
+            <span className="title text-[1.5rem]">Yours Shipping Details</span>
           </h2>
           <form className="flex flex-col gap-[.5rem] w-[20rem]" method="post">
             <input  type="text" placeholder="Name" ref={refName} className=" text-stone-700 transition focus:outline focus:outline-2 focus:outline-green-500 p-[.5rem] pr-[3rem] rounded-md bg-stone-200 relative w-[100%]"/>

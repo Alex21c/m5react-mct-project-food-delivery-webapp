@@ -1,3 +1,4 @@
+import './Cart.css';
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useContext, useReducer } from "react";
@@ -67,12 +68,12 @@ export default function Cart(){
   }
   
   return (
-    <div className="mt-[2rem] pt-[1rem] border-0 border-slate-200 p-[2rem] max-w-[120rem]  m-auto rounded-md  text-[1.2rem] text-stone-200 ">
+    <div className="pageWrapper mt-[2rem] pt-[1rem] border-0 border-slate-200 p-[2rem] max-w-[120rem]  m-auto rounded-md  text-[1.2rem] text-stone-200 ">
       <Header/>  
 
       <div  className='flex flex-col items-center bg-gradient-to-br from-emerald-700 to-emerald-800 pb-[5rem]'>
         <section className="flex flex-col gap-[2rem]">
-          <h2 className="smallCaps text-slate-50 text-[2rem] text-center mt-[1rem]">Yours Shopping Cart</h2>
+          <h2 className="shoppingCartHeading smallCaps text-slate-50 text-[2rem] text-center mt-[1rem]">Yours Shopping Cart</h2>
           <div>
             {
               stateCartTotal <=0 ? <div className="text-[2rem] text-center text-yellow-200">Yours Shopping Cart is Empty!</div> : ""

@@ -1,3 +1,4 @@
+
 import { useParams } from "react-router-dom";
 import { useContext, useReducer } from "react";
 import { useRef } from "react";
@@ -53,18 +54,16 @@ export default function Product(){
   // }, [stateProduct]);
   
   return (
-    <div className="mt-[2rem] pt-[1rem] border-0 border-slate-200 p-[2rem] max-w-[120rem]  m-auto rounded-md  text-[1.2rem] text-stone-200 ">
+    <div className=" pageWrapper mt-[2rem] pt-[1rem] border-0 border-slate-200 p-[2rem] max-w-[120rem]  m-auto rounded-md  text-[1.2rem] text-stone-200 ">
       <Header/>  
       <SimpleSnackbar open={open} setOpen={setOpen}/>
       <div id='wrapperProduct' className='flex flex-col items-center bg-gradient-to-br from-emerald-700 to-emerald-800 pb-[5rem]'>
         {
 
           stateProduct?.id  && 
-          <div className="wrapperInnerProduct flex flex-col gap-[1rem]  p-[2rem] max-w-[80rem]">
-            <h2 className="smallCaps text-[2rem] font-semibold mt-[1rem]">{stateProduct.title}</h2>
-            <div className="">
-
-              <dl className=" flex flex-col gap-[1rem] ">
+          <div className="wrapperImageTitleAndMetadata flex flex-col gap-[1rem]  p-[2rem] max-w-[80rem]">
+            <h2 className="smallCaps text-[2rem] font-semibold mt-[1rem]">{stateProduct.title}</h2>            
+              <dl className="flex flex-col gap-[1rem] ">
                 <div className="wrapperProdudctImgAndDescPlusIngredients flex  gap-[1rem]">
                   <div className="wrapperDescriptionAndIngredients w-[60%] flex flex-col gap-[1rem]">
                     <div>
@@ -117,9 +116,9 @@ export default function Product(){
                       </dd>
                     </div>
                   </div>
-                  <div className="w-[40%]">
+                  <div className="parentWrapperProductImage w-[40%]">
                   
-                    <div className="productImage rounded-md overflow-hidden max-h-[25rem] shadow-md shadow-green-300">              
+                    <div className="wrapperProductImage rounded-md overflow-hidden max-h-[25rem] shadow-md shadow-green-300">              
                         <img className="w-[100%] h-[100%] object-cover" src={require(`../../Assests/Images/${stateProduct.image}`)} alt={`Image ${stateProduct.title}`} title={stateProduct.title}/>                  
                     </div>
                     
@@ -130,7 +129,7 @@ export default function Product(){
       
 
               </dl>
-            </div>
+            
           </div>
         }
         

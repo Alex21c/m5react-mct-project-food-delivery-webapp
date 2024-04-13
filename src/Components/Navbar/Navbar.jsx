@@ -1,12 +1,18 @@
+import './Navbar.css';
 import {Link} from'react-router-dom'
 import { ContextFoodCartWebApp } from '../Context/ContextFoodCartWebApp';
 import { useContext } from 'react';
+import { useState } from 'react';
+
+
 
 export default function Navbar(){
-  let {stateWhoIsCurrentPage} = useContext(ContextFoodCartWebApp);
+  let {stateWhoIsCurrentPage, stateNavbarVisibility, updateStateNavbarVisibility} = useContext(ContextFoodCartWebApp);
+
+
   ////console.log(stateWhoIsCurrentPage);
   return (
-    <nav id='headerNav' className=" p-[2rem] flex gap-[1.5rem] justify-center text-stone-700">
+    <nav id='headerNav' style={stateNavbarVisibility} className={`relative bg-gradient-to-br from-yellow-200 to-yellow-300  p-[2rem] flex gap-[1.5rem] justify-center text-stone-700 rounded-md ${stateNavbarVisibility}`}>
       <h2 className='displayNone'>Primary Header Navigation</h2>
       <Link to="/" className='hover:text-white transition text-[1.5rem] font-medium flex gap-[.2rem]'>
         <i className="fa-solid fa-house"></i>
@@ -24,6 +30,9 @@ export default function Navbar(){
         <span className={`${stateWhoIsCurrentPage === 'ContactUs' ? "underline" : "" }`}>Contact Us</span>
         
         </Link>
+        <div className={`wrapperCloseIcon absolute top-[1rem] right-[1rem] ${stateNavbarVisibility}`} onClick={()=>{updateStateNavbarVisibility({})}} >
+          <i className="text-stone-700 fa-solid fa-circle-xmark text-[2.5rem] hover:text-emerald-600 transition"></i>
+        </div>
     </nav>
   );
 }

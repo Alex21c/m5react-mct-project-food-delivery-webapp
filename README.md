@@ -7,7 +7,7 @@
 ## Project Description
 Veg. Restaurant is part of [Geekster](https://www.geekster.in/) MERN Stack Module #5 Project for Module Clearance Test conducted on 2nd Week of April 2024. Project was developed using ReactJs and TailwindCSS. Google Firebase was used for Authentication and Google Firestore Database was used for Storing Cart data.
 
-Project featuring a Veg. Restaurant where use can browse food items like North Indian, Chinese etc., place an order after sign in using email and password. The order will be recived to the backend and Restaurant owner can process the order accordingly.
+Project featuring a Veg. Restaurant where use can browse food items like North Indian, Chinese etc., place an order after sign in using email and password. The order will be received to the backend and Restaurant owner can process the order accordingly.
 
 ## How to install and run in yours local machine
 ```bash
@@ -23,7 +23,7 @@ npm run start
 + [React Router Dom](https://reactrouter.com/en/main/start/tutorial) for providing routing functionality
 + [React Context API](https://react.dev/reference/react/useContext) for providing global state across application components
 + [Material UI Snack Bar](https://mui.com/material-ui/react-snackbar/) for providing notification to user when product added to cart
-+ [Mateiral UI Pagination](https://mui.com/material-ui/react-pagination/) for optimizing user bandwidth & resources utilization by loading only limited no of products and rest allowing user to load using pagination
++ [Material UI Pagination](https://mui.com/material-ui/react-pagination/) for optimizing user bandwidth & resources utilization by loading only limited no of products and rest allowing user to load using pagination
 + [Google Firebase](console.firebase.google.com) for user Authentication, orders processing and storage
 
 ## Important 
@@ -47,7 +47,7 @@ i express my gratitude towards [Geekster](https://www.geekster.in/) for providin
 + [Ankit Singh](https://www.linkedin.com/in/asingh88029/) Sir (Educator Assistant)
 + Manan Bansal Sir (For checking Assignments, projects and providing feedback)
 + Success Managers: Palak Bhardwaj Mam, Yatharth Sharma Sir, Aanchal Parnami Mam, Avinash Prakash Sir
-+ Geekster Curriculm Team: for designing cutting edge ReactJs curriculm along with real life industry standard assignemnts as proejcts
++ Geekster Curriculum Team: for designing cutting edge ReactJs Curriculum along with real life industry standard assignments as projects
 + Geekster Administrative Team: for timely starting classes, providing concept videos and study material!
 
 

@@ -25,14 +25,18 @@ export default function Header(){
 
   }
   let currentPageUrl = encodeURIComponent(window.location.pathname);
-  let {stateCart, dispatch, stateUserAuthMetaData, stateWhoIsCurrentPage, stateNavbarVisibility, updateStateNavbarVisibility} = useContext(ContextFoodCartWebApp);
+  let {stateCart, dispatch, stateUserAuthMetaData, stateWhoIsCurrentPage, stateNavbarVisibility, updateStateNavbarVisibility, stateIsNavbarPopUpMenuVisible, updateStateIsNavbarPopUpMenuVisible} = useContext(ContextFoodCartWebApp);
   // ////console.log('inside header state cart is: ' , stateCart);
   // ////console.log('data is ', stateUserAuthMetaData)
   return (
     <header className="relative flex bg-gradient-to-br from-yellow-200 to-yellow-300 items-center justify-between p-[1rem] rounded-tl-md rounded-tr-md ">
       <div className={`wrapperLogoAndMenuIcon flex gap-[2rem] items-center`}>
       
-        <div className="wrapperMenuIcon pl-[.5rem]" onClick={()=>updateStateNavbarVisibility({display:'flex'})}>
+        <div className="wrapperMenuIcon pl-[.5rem]" onClick={()=>{
+          updateStateNavbarVisibility({display:'flex'})
+          updateStateIsNavbarPopUpMenuVisible(true);
+          }
+        }>
           <i className="text-stone-700 fa-solid fa-bars text-[2.5rem] hover:text-emerald-600 transition"></i>
         </div>
       <Link to="/" title="Logo: Food Delivery App">

@@ -10,6 +10,7 @@ import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "firebas
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
+import './SignIn.css';
 
 // let email='customer@alex21c.com';
 // let password='customer123$';
@@ -96,8 +97,13 @@ export default function SignIn(){
     // testing();
   },[]);
 
+  useEffect(()=>{
+    document.title="Sign In";
+    
+  },[stateWhoIsCurrentPage]);
+
   return (
-    <div className="mt-[2rem] pt-[1rem] border-0 border-slate-200 p-[2rem] max-w-[120rem]  m-auto rounded-md  text-[1.2rem] text-stone-200 ">
+    <div className="pageWrapper mt-[2rem] pt-[1rem] border-0 border-slate-200 p-[2rem] max-w-[120rem]  m-auto rounded-md  text-[1.2rem] text-stone-200 ">
       <Header/>  
 
       <div  className='flex flex-col items-center bg-gradient-to-br from-emerald-700 to-emerald-800 pb-[5rem] pt-[1rem]'>
@@ -109,7 +115,7 @@ export default function SignIn(){
         {
           !stateUserAuthMetaData?.uid ? 
           <>
-              <form className="flex flex-col gap-[.5rem] w-[20rem]" method="post">
+              <form className="signInForm flex flex-col gap-[.5rem] w-[20rem]" method="post">
                 <input ref={refEmail} type="email" placeholder="e-Mail" className=" text-stone-700 transition focus:outline focus:outline-2 focus:outline-green-500 p-[1rem] pr-[3rem] rounded-md bg-stone-200 relative w-[100%]" name='email'/>
                 <input ref={refPassword} type="password" placeholder="password" className=" text-stone-700 transition focus:outline focus:outline-2 focus:outline-green-500 p-[1rem] pr-[3rem] rounded-md bg-stone-200 relative w-[100%]" name='password' />
                 <SuccessAndErrorMsg  stateSuccessAndErrorMsg={stateSuccessAndErrorMsg}/> 

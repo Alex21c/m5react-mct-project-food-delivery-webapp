@@ -55,6 +55,10 @@ export default function Homepage(){
 
       // ////console.log('here is the data', stateListOfProducts) 
     },[]);
+    useEffect(()=>{
+      document.title="Homepage: Veg Restaurant";
+      
+    },[stateWhoIsCurrentPage]);
 
     // useEffect(()=>{
     //   //console.log(stateInitialListOfProducts);
@@ -67,6 +71,7 @@ export default function Homepage(){
         // ////console.log(data)
       
     },[stateListOfProducts]);
+
 
   return (
     <div className="pageWrapper mt-[2rem] pt-[1rem] border-0 border-slate-200 p-[2rem] max-w-[120rem]  m-auto rounded-md  text-[1.2rem] text-stone-200 ">

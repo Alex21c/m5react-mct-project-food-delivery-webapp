@@ -298,12 +298,12 @@ const ContextProviderFoodCartWebApp = ({children}) =>{
   // }
   let [stateOrdersReceived, updateStateOrdersReceived] = useState([]);
   let [stateNavbarVisibility, updateStateNavbarVisibility] = useState({});
-
+  let [stateIsNavbarPopUpMenuVisible, updateStateIsNavbarPopUpMenuVisible] = useState(false);
   const contextValue = {
     // template, stateCart
     stateCart, dispatch, stateWhoIsCurrentPage, updateStateWhoIsCurrentPage,
     stateListOfProducts, updateStateListOfProducts, stateInitialListOfProducts, updateStateInitialListOfProducts, stateSuccessAndErrorMsg, updateStateSuccessAndErrorMsg, stateUserAuthMetaData, stateOrdersReceived, updateStateOrdersReceived,
-    stateNavbarVisibility, updateStateNavbarVisibility
+    stateNavbarVisibility, updateStateNavbarVisibility, stateIsNavbarPopUpMenuVisible, updateStateIsNavbarPopUpMenuVisible
   };
 
   

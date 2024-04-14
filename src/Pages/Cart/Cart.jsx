@@ -49,6 +49,11 @@ export default function Cart(){
     // //console.log('state cart is ', stateCart);
   },[]);
   useEffect(()=>{
+    document.title=stateWhoIsCurrentPage;
+    
+  },[stateWhoIsCurrentPage]);
+    
+  useEffect(()=>{
     computeCartTotal();
     
   },[stateCart]);

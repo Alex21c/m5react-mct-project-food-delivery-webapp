@@ -3,7 +3,7 @@
   display: none;
 }
 
-@media screen and (max-width:974px) {
+@media screen and (max-width:990px) {
 
   nav#headerNav{
     display: none;

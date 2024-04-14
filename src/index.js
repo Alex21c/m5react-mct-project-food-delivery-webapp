@@ -8,6 +8,7 @@ import { RouterProvider, BrowserRouter, createBrowserRouter } from 'react-router
 import NotFound from './Components/NotFound/NotFound';
 import Product from './Pages/Product/Product';
 import Cart from './Pages/Cart/Cart';
+import About from './Pages/About/About';
 import SignIn from './Pages/SignIn/SignIn';
 import Checkout from './Pages/Checkout/Checkout';
 import OrderReceived from './Pages/OrderReceived/OrderReceived';
@@ -21,6 +22,11 @@ const router = createBrowserRouter([
   {
     path: "product/:productCategory/:productID",
     element: <Product/>,
+    errorElement: <NotFound/>
+  },
+  {
+    path: "about/",
+    element: <About/>,
     errorElement: <NotFound/>
   },
   {

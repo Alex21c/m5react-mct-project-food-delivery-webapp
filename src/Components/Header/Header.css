@@ -2,7 +2,7 @@ header div.wrapperMenuIcon{
   display: none;
 }
 
-@media screen and (max-width:974px) {
+@media screen and (max-width:990px) {
   header div.wrapperMenuIcon{
     display: initial;
   }

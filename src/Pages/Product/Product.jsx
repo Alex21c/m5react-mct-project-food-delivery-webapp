@@ -45,6 +45,11 @@ export default function Product(){
  
   }, [])
 
+  useEffect(()=>{
+    document.title=stateProduct.title;
+    
+  },[stateProduct]);
+
   // useEffect(()=>{
   //   ////console.log(stateCart);
   // },[stateCart]);

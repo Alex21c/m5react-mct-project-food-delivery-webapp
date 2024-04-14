@@ -42,7 +42,7 @@ export default function CartItem({product, dispatch}){
                           productCategory: product.category
 
                           }}) 
-        } className="fa-sharp fa-solid fa-chevron-up font-semibold  outline outline-2 outline-amber-50 bg-yellow-300 hover:bg-yellow-500 transition cursor-pointer px-[.8rem] p-[.3rem] rounded-full hover:text-slate-50 text-slate-900 text-[1.3rem] max-w-[6rem]"></i>
+        } className=" fa-sharp fa-solid fa-plus   outline outline-2 outline-amber-50 bg-yellow-300 hover:bg-yellow-500 transition cursor-pointer px-[.8rem] p-[.3rem] rounded-full hover:text-slate-50 text-slate-900 text-[1.5rem] max-w-[6rem]"></i>
         {/* <span className="">{product.quantity}</span> */}
         <input  className=" text-slate-200  bg-transparent outline-2  py-[.2rem]  p-[.5rem] w-[5rem] h-[3rem] rounded-md text-center" ref={refQuantity} type="text" readOnly={true} value={product.quantity}/>
         <i onClick={()=>dispatch({type:'decreaseQuantity', payload: {
@@ -51,7 +51,7 @@ export default function CartItem({product, dispatch}){
                           productCategory: product.category
 
                           }}) 
-        } className="fa-sharp fa-solid fa-chevron-down font-semibold  outline outline-2 outline-amber-50 bg-yellow-300 hover:bg-yellow-500 transition cursor-pointer px-[.8rem] p-[.3rem] rounded-full hover:text-slate-50 text-slate-900 text-[1.3rem] max-w-[6rem]"></i>
+        } className="fa-sharp fa-solid fa-minus font-semibold  outline outline-2 outline-amber-50 bg-yellow-300 hover:bg-yellow-500 transition cursor-pointer px-[.8rem] p-[.3rem] rounded-full hover:text-slate-50 text-slate-900 text-[1.5rem] max-w-[6rem]"></i>
       </div>
 
     </div>

@@ -33,7 +33,7 @@
    padding-bottom: 2rem;
   }
   div.productQuantityUpdateController{
-   flex-direction: row;
+   flex-direction: row-reverse;
    gap:1.5rem;
   }
  div.wrapperTotal{

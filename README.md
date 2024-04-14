@@ -5,19 +5,15 @@
 [m5react-mct-project-food-delivery-webapp](https://m5react-mct-project-food-delivery-webapp.vercel.app/)
 
 ## Project Description
-A food delivery app built using React offers a dynamic and user-friendly interface for ordering food from various restaurants. Leveraging React's component-based architecture, developers can create interactive features like real-time menu browsing, secure payment processing, and order tracking. React's efficiency ensures smooth performance across different devices, enhancing the overall user experience.
+Veg. Restaurant is part of [Geekster](https://www.geekster.in/) MERN Stack Module #5 Project for Module Clearance Test conducted on 2nd Week of April 2024. Project was developed using ReactJs and TailwindCSS. Google Firebase was used for Authentication and Google Firestore Database was used for Storing Cart data.
 
-
-
+Project featuring a Veg. Restaurant where use can browse food items like North Indian, Chinese etc., place an order after sign in using email and password. The order will be recived to the backend and Restaurant owner can process the order accordingly.
 
 ## How to install and run in yours local machine
 ```bash
 npm install
 npm run start
 ```
-
-
-
 
 ## Tech. Stack Used:
 + [React](https://react.dev/)
@@ -43,6 +39,16 @@ while deploying yours app to [Vercel](https://vercel.com/) you need to specify t
 
 ### Why i did this?
 to protect my API Key from aunthorized activity! 
+
+
+## Credits
+i express my gratitude towards [Geekster](https://www.geekster.in/) for providing me opportunity to become MERN Stack developer and achieve my vision board Financial Freedom Goal! Apart from Geekster i express my gratitude towards:
++ [Mohit kadwe](https://www.linkedin.com/in/mohit-kadwe/) Sir (Educator ReactJs)
++ [Ankit Singh](https://www.linkedin.com/in/asingh88029/) Sir (Educator Assistant)
++ Manan Bansal Sir (For checking Assignments, projects and providing feedback)
++ Success Managers: Palak Bhardwaj Mam, Yatharth Sharma Sir, Aanchal Parnami Mam, Avinash Prakash Sir
++ Geekster Curriculm Team: for designing cutting edge ReactJs curriculm along with real life industry standard assignemnts as proejcts
++ Geekster Administrative Team: for timely starting classes, providing concept videos and study material!
 
 
 ## Author

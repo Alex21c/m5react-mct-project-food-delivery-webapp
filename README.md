@@ -5,9 +5,8 @@
 [m5react-mct-project-food-delivery-webapp](https://m5react-mct-project-food-delivery-webapp.vercel.app/)
 
 ## Project Description
-Veg. Restaurant is part of [Geekster](https://www.geekster.in/) MERN Stack Module #5 Project for Module Clearance Test conducted on 2nd Week of April 2024. Project was developed using ReactJs and TailwindCSS. Google Firebase was used for Authentication and Google Firestore Database was used for Storing Cart data.
-
-Project featuring a Veg. Restaurant where customer can browse food items like North Indian, Chinese etc., place an order after sign in using email and password. The order will be received to the backend and Restaurant owner can process the order accordingly.
++ Project featuring a Veg. Restaurant where customer can browse food items like North Indian, Chinese etc., place an order after sign in using email and password. The order will be received to the backend and Restaurant owner can process the order accordingly.
++ Veg. Restaurant is part of [Geekster](https://www.geekster.in/) MERN Stack Module #5 Project for Module Clearance Test conducted on 2nd Week of April 2024. Project was developed using ReactJs and TailwindCSS. Google Firebase was used for Authentication and Google Firestore Database was used for Storing Cart data.
 
 ## How to install and run in yours local machine
 ```bash
